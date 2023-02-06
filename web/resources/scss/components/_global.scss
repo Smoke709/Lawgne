@@ -1,0 +1,146 @@
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+
+/* button */
+.btn {
+    width: 227px;
+    height: 55px;
+    border: 2px solid $light-grey;
+    color: $light-grey;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    transition: 0.4s;
+
+    &:hover {
+        background-color: $btn-bg-color;
+        border: 2px solid transparent;
+        color: $white;
+    }
+
+    &.active {
+        background-color: $btn-bg-color;
+        border: 2px solid transparent;
+        color: $white;
+    }
+}
+
+.section-contents {
+    max-width: 643px;
+    position: relative;
+
+    h4 {
+        color: $btn-bg-color;
+        font-weight: 600;
+
+        span {
+            display: inline-block;
+            position: relative;
+            padding: 8px 76px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 83%;
+                width: 50px;
+                height: 3px;
+                background-color: $btn-bg-color;
+                top: 50%;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 43px;
+        font-weight: 700;
+        line-height: 1;
+        color: $title-color;
+        padding: 0 0 20px;
+        @include breakpoint (smaller){
+            font-size: 35px;
+        }
+    }
+
+    p {
+        color: $title-color;
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 0 0 15px;
+    }
+
+    .btn {
+
+        i {
+            padding-left: 8px;
+            font-size: 12px;
+            font-family: 200;
+        }
+    }
+}
+/*.section-title */
+.section-title{
+    max-width: 547px;
+    margin-bottom: 70px;
+
+    h4 {
+        color: $btn-bg-color;
+        font-weight: 600;
+
+        span {
+            display: inline-block;
+            position: relative;
+            padding: 8px 76px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                right: 83%;
+                width: 50px;
+                height: 3px;
+                background-color: $btn-bg-color;
+                top: 50%;
+            }
+        }
+        @include breakpoint (iPhone5){
+            font-size: 20px;
+        }
+    }
+
+    h2 {
+        font-size: 43px;
+        font-weight: 700;
+        line-height: 1;
+        color: $title-color;
+        padding: 0 0 20px;
+        @include breakpoint (smaller){
+            font-size: 35px;
+        }
+    }
+}
+/* .slick-dots */
+.slick-dots {
+    
+    li {
+        button {
+            border: 3px solid #cfd2d9;
+            border-radius: 50%;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        &.slick-active {
+            button {
+                border: 3px solid $btn-bg-color;
+            }
+        }
+    }
+}
